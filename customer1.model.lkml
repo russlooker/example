@@ -1,6 +1,7 @@
 connection: "demo_bq"
 
 include: "/views/*.view.lkml"
+include: "default.dashboard.lookml"
 
 explore: order_items {
   join: custom_inventory {

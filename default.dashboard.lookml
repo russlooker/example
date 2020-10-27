@@ -1,17 +1,16 @@
-- dashboard: financial_analytics
-  title: Financial Analytics
+- dashboard: example_default_content
+  title: Example Default Content
   layout: newspaper
-  preferred_viewer: dashboards-next
   elements:
-  - title: Weekly Profit
-    name: Weekly Profit
+  - title: New Tile
+    name: New Tile
     explore: order_items
     type: looker_line
-    fields: [inventory_items.total_profit, inventory_items.sold_week]
-    fill_fields: [inventory_items.sold_week]
-    sorts: [inventory_items.sold_week desc]
+    fields: [custom_inventory.total_profit, order_items.created_at]
+    fill_fields: [order_items.created_at]
+    sorts: [order_items.created_at desc]
     limit: 500
-    column_limit: 50
+    query_timezone: America/Los_Angeles
     x_axis_gridlines: false
     y_axis_gridlines: true
     show_view_names: false
@@ -37,8 +36,7 @@
     show_null_points: true
     interpolation: linear
     defaults_version: 1
-    listen: {}
     row: 0
     col: 0
-    width: 8
+    width: 13
     height: 6
